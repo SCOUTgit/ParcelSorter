@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -9,20 +10,31 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private float subTime;
 
+    float time;
+    private Image image;
 
     void Start()
     {
-        
+        image = gameObject.GetComponent<Image>();
+        StartCoroutine(MeasureTime());
     }
 
-    private IEnumerator SetTimer(){
-        float time = startTime;
-        WaitForSeconds seconds = new WaitForSeconds(0.1f);
-        while(time > 0){
-            time-=0.1f;
+    public void SetTimer()
+    {
+        time = startTime;
+        startTime -= subTime;
+    }
+
+    private IEnumerator MeasureTime()
+    {
+        time = startTime;
+        WaitForSeconds seconds = new WaitForSeconds(0.02f);
+        while (time > 0)
+        {
+            time -= 0.02f;
+            image.fillAmount = time / startTime;
             yield return seconds;
         }
-        
         yield break;
     }
 }

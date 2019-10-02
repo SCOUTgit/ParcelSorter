@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class ParcelManager : MonoBehaviour
 {
-    public Queue<Parcel> parcelQueue{get; private set;}
+    public Queue<Parcel> parcelQueue { get; private set; }
     [SerializeField]
     private List<GameObject> parcelList;
 
-    private void Start() {
+    private void Start()
+    {
         parcelQueue = new Queue<Parcel>();
-        parcelList.ForEach((parcel)=>{
-            parcelQueue.Enqueue(parcel.GetComponent<Parcel>());
-        });      
+        parcelList.ForEach((parcel) => parcelQueue.Enqueue(parcel.GetComponent<Parcel>()));
     }
+
+    public bool CheckSort(Parcel.Direction direction)=> parcelQueue.Peek().CompareDirection(direction)&&!parcelQueue.Peek().isMoving;
 
     public void Sort()
     {
-       // 점수 증가시키기
         Parcel parcel = parcelQueue.Peek();
         parcelQueue.Dequeue();
         parcel.StartCoroutine("Sort");
