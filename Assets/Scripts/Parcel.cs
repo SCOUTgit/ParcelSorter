@@ -30,13 +30,11 @@ public class Parcel : MonoBehaviour
     public void SetDirection()
     {
         direction = (Direction)Random.Range(0, System.Enum.GetValues(typeof(Direction)).Length);
+        spriteRenderer.color = new Color(0, 255, 0);
         switch (direction)
         {
             case Direction.left:
                 spriteRenderer.color = new Color(255, 0, 0);
-                break;
-            case Direction.down:
-                spriteRenderer.color = new Color(0, 255, 0);
                 break;
             case Direction.right:
                 spriteRenderer.color = new Color(0, 0, 255);
@@ -44,7 +42,7 @@ public class Parcel : MonoBehaviour
         }
     }
 
-    public bool CompareDirection(Direction selectedDirection) => direction == selectedDirection;
+    public bool CanSort(Direction selectedDirection) => direction == selectedDirection && !isMoving;
 
     private IEnumerator Move()
     {

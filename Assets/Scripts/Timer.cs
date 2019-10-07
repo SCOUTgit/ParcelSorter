@@ -35,6 +35,11 @@ public class Timer : MonoBehaviour
             image.fillAmount = time / startTime;
             yield return seconds;
         }
+    #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+    #else
+        Application.Quit();
+    #endif
         yield break;
     }
 }
