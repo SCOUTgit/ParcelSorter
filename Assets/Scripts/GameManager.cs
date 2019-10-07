@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,11 +13,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Timer timer;
     [SerializeField]
-    private Text scoreText;
+    private Belt belt;
     [SerializeField]
-    private int scoreIncreaseAmount;
-
-    private int score = 0;
+    private Score score;
 
     private void Start()
     {
@@ -31,13 +28,12 @@ public class GameManager : MonoBehaviour
     {
         if (parcelQueue.Peek().CanSort(direction))
         {
-            timer.SetTimer();
-
-            score += scoreIncreaseAmount;
-            scoreText.text = $"Score : {score}";
+            timer.SetTimer(score.score);
+            score.SetText();
 
             Parcel parcel = parcelQueue.Peek();
             parcelQueue.Dequeue();
+            parcelQueue.Peek().moveAnimation = belt.SetAnimationSpeed;
             parcel.StartCoroutine("Sort");
             foreach (var item in parcelQueue)
                 item.StartCoroutine("Move");

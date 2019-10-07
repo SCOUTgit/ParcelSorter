@@ -19,27 +19,30 @@ public class Timer : MonoBehaviour
         StartCoroutine(MeasureTime());
     }
 
-    public void SetTimer()
+    public void SetTimer(int score)
     {
         time = startTime;
-        startTime -= subTime;
+        if (startTime - subTime > 0)
+            startTime -= subTime;
+        image.color = new Color(1, (255 - score * 2)/255f, 0, 1);
     }
 
     private IEnumerator MeasureTime()
     {
         time = startTime;
         WaitForSeconds seconds = new WaitForSeconds(0.02f);
+
         while (time > 0)
         {
             time -= 0.02f;
             image.fillAmount = time / startTime;
             yield return seconds;
         }
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-    #else
+#else
         Application.Quit();
-    #endif
+#endif
         yield break;
     }
 }
