@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    public System.Action fail;
+
     [SerializeField]
     private float startTime;
     [SerializeField]
@@ -38,11 +40,7 @@ public class Timer : MonoBehaviour
             image.fillAmount = time / startTime;
             yield return seconds;
         }
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        fail();
         yield break;
     }
 }

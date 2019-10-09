@@ -22,10 +22,13 @@ public class GameManager : MonoBehaviour
         parcelQueue = new Queue<Parcel>();
         parcelList.ForEach((parcel) => parcelQueue.Enqueue(parcel.GetComponent<Parcel>()));
         sorterList.ForEach((sorter) => sorter.clickEvent = TrySort);
+        timer.fail = Fail;
     }
 
     public void TrySort(Parcel.Direction direction)
     {
+        if(parcelQueue.Peek().isMoving)
+            return;
         if (parcelQueue.Peek().CanSort(direction))
         {
             timer.SetTimer(score.score);
@@ -39,5 +42,20 @@ public class GameManager : MonoBehaviour
                 item.StartCoroutine("Move");
             parcelQueue.Enqueue(parcel);
         }
+
+        else
+        {
+            Fail();
+        }
+    }
+    
+    private void Fail(){
+        score.SaveScore();
+        timer.StopAllCoroutines();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif        
     }
 }

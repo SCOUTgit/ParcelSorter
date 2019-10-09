@@ -43,7 +43,7 @@ public class Parcel : MonoBehaviour
         }
     }
 
-    public bool CanSort(Direction selectedDirection) => direction == selectedDirection && !isMoving;
+    public bool CanSort(Direction selectedDirection) => direction == selectedDirection;
 
     private IEnumerator Move()
     {
