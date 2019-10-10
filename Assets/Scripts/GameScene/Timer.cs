@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public System.Action fail;
+    public System.Action GameOver;
 
     [SerializeField]
     private float startTime;
@@ -40,7 +40,7 @@ public class Timer : MonoBehaviour
             image.fillAmount = time / startTime;
             yield return seconds;
         }
-        fail();
+        GameOver();
         yield break;
     }
 }

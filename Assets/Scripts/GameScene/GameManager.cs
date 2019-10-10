@@ -18,13 +18,15 @@ public class GameManager : MonoBehaviour
     private Score score;
     [SerializeField]
     private List<AudioClip> boxSound;
+    [SerializeField]
+    private GameObject gameOverBoardPrefab;
 
     private void Start()
     {
         parcelQueue = new Queue<Parcel>();
         parcelList.ForEach((parcel) => parcelQueue.Enqueue(parcel.GetComponent<Parcel>()));
         sorterList.ForEach((sorter) => sorter.clickEvent = TrySort);
-        timer.fail = Fail;
+        timer.GameOver = GameOver;
     }
 
     public void TrySort(Parcel.Direction direction)
@@ -48,12 +50,14 @@ public class GameManager : MonoBehaviour
 
         else
         {
-            Fail();
+            GameOver();
         }
     }
     
-    private void Fail(){
+    private void GameOver(){
         score.SaveScore();
         timer.StopAllCoroutines();
+        var failBoard = Instantiate(gameOverBoardPrefab).GetComponent<GameOverBoard>();
+        failBoard.SetGameOverBoard(score.score);
     }
 }
