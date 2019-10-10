@@ -24,6 +24,5 @@ public class Score : MonoBehaviour
         int bestScore = PlayerPrefs.GetInt("BestScore");
         if (bestScore < score)
             PlayerPrefs.SetInt("BestScore", score);
-        Debug.Log(bestScore);
     }
 }
