@@ -4,19 +4,18 @@ using UnityEngine.UI;
 public class MuteButton : MonoBehaviour
 {
     [SerializeField]
-    private Image muteImage;
+    private Sprite muteSprite;
     [SerializeField]
-    private Image unmuteImage;
-
+    private Sprite unmuteSprite;
+    [SerializeField]
     private Image image;
 
     private void Start()
     {
         if(PlayerPrefs.GetInt("Mute") == 1){
-            image = muteImage;
+            image.sprite = muteSprite;
             SoundManager.instance.Mute();
         }
-        image = gameObject.GetComponent<Image>();
         gameObject.GetComponent<Button>().onClick.AddListener(() => Mute());
     }
 
@@ -24,12 +23,12 @@ public class MuteButton : MonoBehaviour
     {
         if (SoundManager.instance.isMute)
         {
-            image = unmuteImage;
+            image.sprite = unmuteSprite;
             SoundManager.instance.Unmute();
         }
         else
         {
-            image = muteImage;
+            image.sprite = muteSprite;
             SoundManager.instance.Mute();
         }
         PlayerPrefs.SetInt("Mute", SoundManager.instance.isMute ? 1 : 0);

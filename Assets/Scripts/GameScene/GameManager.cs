@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private Belt belt;
     [SerializeField]
     private Score score;
+    [SerializeField]
+    private List<AudioClip> boxSound;
 
     private void Start()
     {
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
         {
             timer.SetTimer(score.score);
             score.SetText();
+            SoundManager.instance.PlaySound(boxSound[Random.Range(0,boxSound.Count)]);
 
             Parcel parcel = parcelQueue.Peek();
             parcelQueue.Dequeue();
