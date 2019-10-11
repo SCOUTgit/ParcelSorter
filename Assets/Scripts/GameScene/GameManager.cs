@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     private List<AudioClip> boxSound;
     [SerializeField]
     private GameObject gameOverBoardPrefab;
+    [SerializeField]
+    private GameObject pauseBoardPrefab;
 
     private void Start()
     {
@@ -27,6 +29,12 @@ public class GameManager : MonoBehaviour
         parcelList.ForEach((parcel) => parcelQueue.Enqueue(parcel.GetComponent<Parcel>()));
         sorterList.ForEach((sorter) => sorter.clickEvent = TrySort);
         timer.GameOver = GameOver;
+    }
+
+    private void Update() {
+        if(Input.GetKey(KeyCode.Escape)){
+            OpenPauseBoard();
+        }
     }
 
     public void TrySort(Parcel.Direction direction)
@@ -59,5 +67,9 @@ public class GameManager : MonoBehaviour
         timer.StopAllCoroutines();
         var failBoard = Instantiate(gameOverBoardPrefab).GetComponent<GameOverBoard>();
         failBoard.SetGameOverBoard(score.score);
+    }
+
+    public void OpenPauseBoard(){
+        Instantiate(pauseBoardPrefab);
     }
 }
