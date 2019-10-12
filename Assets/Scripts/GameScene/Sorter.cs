@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Sorter : MonoBehaviour
 {
-    public System.Action<Parcel.Direction> clickEvent;
+    public System.Action<Direction> clickEvent;
     [SerializeField]
-    private Parcel.Direction direction;
+    private Direction direction;
 
     private void Start()
     {

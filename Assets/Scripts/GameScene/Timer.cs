@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private float startTime;
     [SerializeField]
+    private float lastTime;
+    [SerializeField]
     private float subTime;
 
     float time;
@@ -24,7 +26,7 @@ public class Timer : MonoBehaviour
     public void SetTimer(int score)
     {
         time = startTime;
-        if (startTime - subTime > 0)
+        if (startTime - subTime > lastTime)
             startTime -= subTime;
         image.color = new Color(1, (255 - score * 2)/255f, 0, 1);
     }

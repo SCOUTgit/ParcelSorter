@@ -178,6 +178,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDistance: 2
   sortDistance: 4
-  moveSpeed: 5
+  moveSpeed: 10
   sortSpeed: 15
   createPosition: {x: 0, y: 6, z: 0}

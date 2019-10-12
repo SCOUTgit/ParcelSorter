@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -589,6 +590,21 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca1009856a6940459b5792dd9074474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDistance: 0.05
+  moveTime: 0.05
+  shakeCount: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1003,6 +1019,7 @@ MonoBehaviour:
     type: 3}
   pauseBoardPrefab: {fileID: 1707537100966425424, guid: d15f03ee3d96b1f4ea0c77230b55a4bf,
     type: 3}
+  mainCamera: {fileID: 519420030}
 --- !u!4 &743007837
 Transform:
   m_ObjectHideFlags: 0
@@ -1379,7 +1396,7 @@ GameObject:
   - component: {fileID: 1501164110}
   - component: {fileID: 1501164109}
   m_Layer: 5
-  m_Name: Background
+  m_Name: TimerBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1528,6 +1545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 3
+  lastTime: 0.05
   subTime: 0.02
 --- !u!1 &1643650292
 GameObject:

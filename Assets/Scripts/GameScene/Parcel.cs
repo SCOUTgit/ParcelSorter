@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Direction { down, left, right }
 public class Parcel : MonoBehaviour
 {
-    public enum Direction { down, left, right }
     public bool isMoving { get; private set; }
     public System.Action<bool> moveAnimation;
 
@@ -31,14 +31,14 @@ public class Parcel : MonoBehaviour
     public void SetDirection()
     {
         direction = (Direction)Random.Range(0, System.Enum.GetValues(typeof(Direction)).Length);
-        spriteRenderer.color = new Color(0, 255, 0);
+        spriteRenderer.color = new Color(0, 1, 0);
         switch (direction)
         {
             case Direction.left:
-                spriteRenderer.color = new Color(255, 0, 0);
+                spriteRenderer.color = new Color(1, 0, 0);
                 break;
             case Direction.right:
-                spriteRenderer.color = new Color(0, 0, 255);
+                spriteRenderer.color = new Color(0, 0, 1);
                 break;
         }
     }
@@ -64,7 +64,10 @@ public class Parcel : MonoBehaviour
 
     private IEnumerator Sort()
     {
+        isMoving = true;
         Vector3 startPosition = gameObject.transform.position;
+
+        spriteRenderer.color = new Color(161/255f, 113/255f, 34/255f);
 
         Vector2 sortDirection = Vector2.down;
         switch (direction)
@@ -85,6 +88,7 @@ public class Parcel : MonoBehaviour
 
         gameObject.transform.position = createPosition;
         SetDirection();
+        isMoving = false;
 
         yield break;
     }
