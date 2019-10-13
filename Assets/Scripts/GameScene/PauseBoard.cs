@@ -11,6 +11,8 @@ public class PauseBoard : MonoBehaviour
     [SerializeField]
     private Button goMainButton;
 
+    public System.Action action;
+
     private void Start()
     {
         Time.timeScale = 0;
@@ -19,5 +21,9 @@ public class PauseBoard : MonoBehaviour
         goMainButton.onClick.AddListener(() => SceneManager.LoadScene("MainScene"));
     }
 
-    private void OnDestroy() => Time.timeScale = 1;
+    private void OnDestroy()
+    {
+        Time.timeScale = 1;
+        action();
+    }
 }

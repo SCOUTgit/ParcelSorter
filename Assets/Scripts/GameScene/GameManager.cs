@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private CameraEffect mainCamera;
 
+    private enum State{play, pause, gameover};
+    private State state;
     private Parcel lastParcel;
 
     private void Start()
@@ -34,14 +36,13 @@ public class GameManager : MonoBehaviour
         sorterList.ForEach((sorter) => sorter.clickEvent = TrySort);
         lastParcel = parcelQueue.Peek();
         timer.GameOver = GameOver;
+        state = State.play;
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
-        {
+        if (state == State.play && Input.GetKey(KeyCode.Escape))
             OpenPauseBoard();
-        }
     }
 
     public void TrySort(Direction direction)
@@ -65,13 +66,12 @@ public class GameManager : MonoBehaviour
         }
 
         else
-        {
             GameOver();
-        }
     }
 
     private void GameOver()
     {
+        state = State.gameover;
         score.SaveScore();
         timer.StopAllCoroutines();
         var failBoard = Instantiate(gameOverBoardPrefab).GetComponent<GameOverBoard>();
@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
 
     public void OpenPauseBoard()
     {
-        Instantiate(pauseBoardPrefab);
+        state = State.pause;
+        Instantiate(pauseBoardPrefab).GetComponent<PauseBoard>().action = (()=>state = State.play);;
     }
 }

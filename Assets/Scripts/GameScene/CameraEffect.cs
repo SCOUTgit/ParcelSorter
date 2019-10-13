@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraEffect : MonoBehaviour
@@ -11,15 +10,21 @@ public class CameraEffect : MonoBehaviour
     [SerializeField]
     private int shakeCount;
 
+    private WaitForSeconds waitForMoveTime;
+
+    private void Start()
+    {
+        waitForMoveTime = new WaitForSeconds(moveTime);
+    }
+
     public IEnumerator Shake(Direction direction)
     {
         var firstPosition = gameObject.transform.position;
 
         for (int i = 0; i < shakeCount; i++)
         {
-
             gameObject.transform.Translate((Vector2)Random.insideUnitCircle * moveDistance);
-            yield return new WaitForSeconds(moveTime);
+            yield return waitForMoveTime;
         }
 
         gameObject.transform.position = firstPosition;
