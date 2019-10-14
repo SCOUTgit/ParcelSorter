@@ -72,10 +72,10 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         state = State.gameover;
-        score.SaveScore();
-        timer.StopAllCoroutines();
         var failBoard = Instantiate(gameOverBoardPrefab).GetComponent<GameOverBoard>();
         failBoard.SetGameOverBoard(score.score);
+        score.SaveScore();
+        timer.StopAllCoroutines();
     }
 
     public void OpenPauseBoard()
