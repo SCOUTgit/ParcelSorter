@@ -51,11 +51,13 @@ public class Parcel : MonoBehaviour
         moveAnimation?.Invoke(isMoving);
         Vector3 startPosition = gameObject.transform.position;
 
-        while (Vector3.SqrMagnitude(startPosition - gameObject.transform.position) < moveDistance * moveDistance)
+        while (Vector3.SqrMagnitude(startPosition - gameObject.transform.position - moveSpeed * Vector3.down * Time.deltaTime) < moveDistance * moveDistance)
         {
             gameObject.transform.Translate(moveSpeed * Vector2.down * Time.deltaTime);
             yield return null;
         }
+
+        gameObject.transform.position = startPosition - new Vector3(0, moveDistance, 0);
 
         isMoving = false;
         moveAnimation?.Invoke(isMoving);
@@ -67,7 +69,7 @@ public class Parcel : MonoBehaviour
         isMoving = true;
         Vector3 startPosition = gameObject.transform.position;
 
-        spriteRenderer.color = new Color(161/255f, 113/255f, 34/255f);
+        spriteRenderer.color = new Color(161 / 255f, 113 / 255f, 34 / 255f);
 
         Vector2 sortDirection = Vector2.down;
         switch (direction)
