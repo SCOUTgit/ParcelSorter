@@ -23,6 +23,7 @@ public class GameOverBoard : MonoBehaviour
         if (score > bestScore){
             bestScore = score;
             StartCoroutine(NewBestScore());
+            PlayerPrefs.SetInt("BestScore", score);
         }
 
         scoreText.text = $"Score : {score}";

@@ -18,11 +18,4 @@ public class Score : MonoBehaviour
         score++;
         scoreText.text = $"Score : {score}";
     }
-
-    public void SaveScore()
-    {
-        int bestScore = PlayerPrefs.GetInt("BestScore");
-        if (bestScore < score)
-            PlayerPrefs.SetInt("BestScore", score);
-    }
 }
