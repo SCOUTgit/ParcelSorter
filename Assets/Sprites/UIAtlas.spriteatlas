@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UIAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: db340f7f3eaffae4a941abbfc5e7e1ca, type: 3}
+    totalSpriteSurfaceArea: 8192
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: a69c1fd35cd788043923451b29993e09, type: 3}
+  - {fileID: 21300000, guid: 1ec1de148335a7c4ca9244215aaead4f, type: 3}
+  - {fileID: 21300000, guid: 47d5f2b42a92be349b33a528cedd54d9, type: 3}
+  - {fileID: 21300000, guid: 1d92bce48c576694b8ad983d946153b4, type: 3}
+  - {fileID: 21300000, guid: 7dc56d66d44ab254694071a779634962, type: 3}
+  - {fileID: 21300000, guid: 3429e87d06f0ad74b885cbf732afed25, type: 3}
+  - {fileID: 21300000, guid: dad7e5ae4a41f7c41b81575de4424725, type: 3}
+  - {fileID: 21300000, guid: 29b0ee2f26856894f9ebcbf6a5a5c277, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Exit
+  - Pause
+  - Main
+  - Mute
+  - PlayButton
+  - ArrowButton
+  - UnMute
+  - ReplayButton
+  m_Tag: UIAtlas
+  m_IsVariant: 0

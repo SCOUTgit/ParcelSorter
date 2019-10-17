@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: 18f15e37bad492349a0e5753f2bc895f
+guid: 4a3963c133d4b1845a15ae701f14ef10
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7576011095104966051
-    second: Belt_0
+      213: -7052092230908314665
+    second: SideBelt_0
   - first:
-      213: -5987639837361802967
-    second: Belt_1
+      213: 5598594759176554902
+    second: SideBelt_1
   - first:
-      213: 8816220487074538770
-    second: Belt_2
+      213: 8142476399550737855
+    second: SideBelt_2
   - first:
-      213: 2039626281802277640
-    second: Belt_3
-  - first:
-      213: -7028986135446817494
-    second: Belt_4
-  - first:
-      213: 1734430025835730700
-    second: Belt_5
-  - first:
-      213: -762874548624235858
-    second: Belt_6
+      213: -1165405827365903365
+    second: SideBelt_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -52,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -66,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Belt_0
+      name: SideBelt_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 700
+        width: 20
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bc2247b91647444dad378543edec650
-      internalID: 7576011095104966051
+      spriteID: 5abb33193261dd749940be9a685c1bbd
+      internalID: -7052092230908314665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Belt_1
+      name: SideBelt_1
       rect:
         serializedVersion: 2
-        x: 320
+        x: 20
         y: 0
-        width: 320
-        height: 700
+        width: 20
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01941bec341e7cf4588463d46ca7a79b
-      internalID: -5987639837361802967
+      spriteID: 2c35f8113d585c442b571b2d4c37dc2a
+      internalID: 5598594759176554902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Belt_2
+      name: SideBelt_2
       rect:
         serializedVersion: 2
-        x: 640
+        x: 40
         y: 0
-        width: 320
-        height: 700
+        width: 20
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d972d22a9b7f9234fb7ce125d8a34604
-      internalID: 8816220487074538770
+      spriteID: ba857636bdc049e4291352b38b4d4ec8
+      internalID: 8142476399550737855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Belt_3
+      name: SideBelt_3
       rect:
         serializedVersion: 2
-        x: 960
+        x: 60
         y: 0
-        width: 320
-        height: 700
+        width: 20
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,71 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 124d6614a8ea74644a96dfebb64db525
-      internalID: 2039626281802277640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Belt_4
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 320
-        height: 700
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c67894a56ca56b946aebc53229947ebd
-      internalID: -7028986135446817494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Belt_5
-      rect:
-        serializedVersion: 2
-        x: 1600
-        y: 0
-        width: 320
-        height: 700
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10077f7dcb5b169449797a168f1ffcdf
-      internalID: 1734430025835730700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Belt_6
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 320
-        height: 700
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34a0853d8069e384490d21ef570521f1
-      internalID: -762874548624235858
+      spriteID: 18aebe1bde9689e45ae84df66166563e
+      internalID: -1165405827365903365
       vertices: []
       indices: 
       edges: []

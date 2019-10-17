@@ -17,7 +17,7 @@ public class CameraEffect : MonoBehaviour
         waitForMoveTime = new WaitForSeconds(moveTime);
     }
 
-    public IEnumerator Shake(Direction direction)
+    public IEnumerator Shake()
     {
         var firstPosition = gameObject.transform.position;
 

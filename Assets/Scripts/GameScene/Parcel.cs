@@ -6,7 +6,7 @@ public enum Direction { down, left, right }
 public class Parcel : MonoBehaviour
 {
     public bool isMoving { get; private set; }
-    public System.Action<bool> moveAnimation;
+    public System.Action<float> moveAnimation;
 
     [SerializeField]
     private float moveDistance;
@@ -48,7 +48,7 @@ public class Parcel : MonoBehaviour
     private IEnumerator Move()
     {
         isMoving = true;
-        moveAnimation?.Invoke(isMoving);
+        moveAnimation?.Invoke(moveSpeed);
         Vector3 startPosition = gameObject.transform.position;
 
         while (Vector3.SqrMagnitude(startPosition - gameObject.transform.position - moveSpeed * Vector3.down * Time.deltaTime) < moveDistance * moveDistance)
@@ -60,7 +60,7 @@ public class Parcel : MonoBehaviour
         gameObject.transform.position = startPosition - new Vector3(0, moveDistance, 0);
 
         isMoving = false;
-        moveAnimation?.Invoke(isMoving);
+        moveAnimation?.Invoke(0);
         yield break;
     }
 

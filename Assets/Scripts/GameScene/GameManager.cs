@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
             timer.SetTimer(score.score);
             score.SetText();
             SoundManager.instance.PlaySound(boxSound[Random.Range(0, boxSound.Count)]);
-            mainCamera.StartCoroutine(mainCamera.Shake(direction));
+            mainCamera.StartCoroutine(mainCamera.Shake());
 
             lastParcel = parcelQueue.Peek();
             parcelQueue.Dequeue();

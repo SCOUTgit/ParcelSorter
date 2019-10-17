@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ObjectAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 1daf755c286e4fb4faf4086e43386249, type: 3}
+    totalSpriteSurfaceArea: 23216
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -7052092230908314665, guid: 4a3963c133d4b1845a15ae701f14ef10, type: 3}
+  - {fileID: 5598594759176554902, guid: 4a3963c133d4b1845a15ae701f14ef10, type: 3}
+  - {fileID: 8142476399550737855, guid: 4a3963c133d4b1845a15ae701f14ef10, type: 3}
+  - {fileID: -1165405827365903365, guid: 4a3963c133d4b1845a15ae701f14ef10, type: 3}
+  - {fileID: -2679808197082586771, guid: 88a92ca60ecbc2e45b3bcd2e1efb5655, type: 3}
+  - {fileID: -6854137125476901440, guid: 88a92ca60ecbc2e45b3bcd2e1efb5655, type: 3}
+  - {fileID: 6290772271048417269, guid: 88a92ca60ecbc2e45b3bcd2e1efb5655, type: 3}
+  - {fileID: 7532726693199724949, guid: 88a92ca60ecbc2e45b3bcd2e1efb5655, type: 3}
+  - {fileID: 21300000, guid: f00f63373d79d3e49b6bdd9a0fb01de5, type: 3}
+  - {fileID: 1734430025835730700, guid: 18f15e37bad492349a0e5753f2bc895f, type: 3}
+  - {fileID: -7028986135446817494, guid: 18f15e37bad492349a0e5753f2bc895f, type: 3}
+  - {fileID: -762874548624235858, guid: 18f15e37bad492349a0e5753f2bc895f, type: 3}
+  - {fileID: -5987639837361802967, guid: 18f15e37bad492349a0e5753f2bc895f, type: 3}
+  - {fileID: 7576011095104966051, guid: 18f15e37bad492349a0e5753f2bc895f, type: 3}
+  - {fileID: 2039626281802277640, guid: 18f15e37bad492349a0e5753f2bc895f, type: 3}
+  - {fileID: 8816220487074538770, guid: 18f15e37bad492349a0e5753f2bc895f, type: 3}
+  - {fileID: 21300000, guid: 51990f091ef09f24ab70c7d980ef14ff, type: 3}
+  - {fileID: 21300000, guid: d34f192cc737bf14590c1046eacb84af, type: 3}
+  - {fileID: 21300000, guid: d6af2dbd93c1a334794451234682c547, type: 3}
+  - {fileID: 21300000, guid: 318f533f4daade84893124a585947dcc, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - SideBelt_0
+  - SideBelt_1
+  - SideBelt_2
+  - SideBelt_3
+  - DownBelt_1
+  - DownBelt_0
+  - DownBelt_3
+  - DownBelt_2
+  - TimerBarBackground
+  - Belt_5
+  - Belt_4
+  - Belt_6
+  - Belt_1
+  - Belt_0
+  - Belt_3
+  - Belt_2
+  - TimerBar
+  - ParcelStack
+  - Parcel
+  - Background
+  m_Tag: ObjectAtlas
+  m_IsVariant: 0

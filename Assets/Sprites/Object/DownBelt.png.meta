@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -87,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -99,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,8 +115,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 210
+        width: 20
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,7 +124,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02888c739e7fa3e42908cdeefa955d3c
+      spriteID: 93f48fb0f7021734b8ac0a9a046d4603
       internalID: -6854137125476901440
       vertices: []
       indices: 
@@ -134,10 +134,10 @@ TextureImporter:
       name: DownBelt_1
       rect:
         serializedVersion: 2
-        x: 200
+        x: 20
         y: 0
-        width: 200
-        height: 210
+        width: 20
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,7 +145,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f5923c2736f106499cca0cceb375004
+      spriteID: 00fd20e3d78faf84ea251cd41e28b92e
       internalID: -2679808197082586771
       vertices: []
       indices: 
@@ -155,10 +155,10 @@ TextureImporter:
       name: DownBelt_2
       rect:
         serializedVersion: 2
-        x: 400
+        x: 40
         y: 0
-        width: 200
-        height: 210
+        width: 20
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,7 +166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dee4f9369881c634aba3fa8d485e6ecd
+      spriteID: 8d6817db5daa2fb499db409a2c0ffb10
       internalID: 7532726693199724949
       vertices: []
       indices: 
@@ -176,10 +176,10 @@ TextureImporter:
       name: DownBelt_3
       rect:
         serializedVersion: 2
-        x: 600
+        x: 60
         y: 0
-        width: 200
-        height: 210
+        width: 20
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,7 +187,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34ba9f459148fa6418da033e0bcba74d
+      spriteID: 15d2457a1e324f64c819291de3d96924
       internalID: 6290772271048417269
       vertices: []
       indices: 

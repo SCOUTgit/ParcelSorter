@@ -8,5 +8,5 @@ public class Belt : MonoBehaviour
 
     private void Start() => animator = GetComponent<Animator>();
 
-    public void SetAnimationSpeed(bool run) => animator.SetFloat("Speed", run ? 2 : 0);
+    public void SetAnimationSpeed(float Speed) => animator.SetFloat("Speed", Speed * 0.9f);
 }
