@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private CameraEffect mainCamera;
 
-    private enum State{play, pause, gameover};
+    private enum State { play, pause, gameover };
     private State state;
     private Parcel lastParcel;
 
@@ -41,8 +41,16 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (state == State.play && Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape))
             OpenPauseBoard();
+    }
+
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        if (pauseStatus)
+        {
+            OpenPauseBoard();
+        }
     }
 
     public void TrySort(Direction direction)
@@ -79,7 +87,10 @@ public class GameManager : MonoBehaviour
 
     public void OpenPauseBoard()
     {
-        state = State.pause;
-        Instantiate(pauseBoardPrefab).GetComponent<PauseBoard>().action = (()=>state = State.play);;
+        if (state == State.play)
+        {
+            state = State.pause;
+            Instantiate(pauseBoardPrefab).GetComponent<PauseBoard>().action = (() => state = State.play);
+        }
     }
 }
