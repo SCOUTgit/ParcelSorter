@@ -4,9 +4,9 @@ using UnityEngine;
 public class CameraEffect : MonoBehaviour
 {
     [SerializeField]
-    private float moveDistance;
+    private float shakeDistance;
     [SerializeField]
-    private float moveTime;
+    private float shakeTime;
     [SerializeField]
     private int shakeCount;
 
@@ -14,7 +14,7 @@ public class CameraEffect : MonoBehaviour
 
     private void Start()
     {
-        waitForMoveTime = new WaitForSeconds(moveTime);
+        waitForMoveTime = new WaitForSeconds(shakeTime / shakeCount);
     }
 
     public IEnumerator Shake()
@@ -23,7 +23,7 @@ public class CameraEffect : MonoBehaviour
 
         for (int i = 0; i < shakeCount; i++)
         {
-            gameObject.transform.Translate((Vector2)Random.insideUnitCircle * moveDistance);
+            gameObject.transform.Translate((Vector2)Random.insideUnitCircle * shakeDistance);
             yield return waitForMoveTime;
         }
 
