@@ -8,7 +8,8 @@
 ## 스크린샷
 - 메인 화면 / 게임 화면 / 일시정지 화면 / 게임오버 화면
 
-![main](./main.png) ![game](./game.png) ![pause](./pause.png) ![gameover](./gameover.png)
+<img src="./main.png" height="350px"> <img src="./game.png" height="350px"> <img src="./pause.png" height="350px"> <img src="./gameover.png" height="350px">
+
 ## 게임 설명
 ### 메인 화면
 - 음소거 버튼을 이용해서 게임 내의 소리를 키고 끌 수 있다.
