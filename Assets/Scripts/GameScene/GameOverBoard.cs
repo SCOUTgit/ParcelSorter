@@ -24,6 +24,7 @@ public class GameOverBoard : MonoBehaviour
             bestScore = score;
             StartCoroutine(NewBestScore());
             PlayerPrefs.SetInt("BestScore", score);
+            GooglePlayGameService.UpdateScore(score);
         }
 
         scoreText.text = $"Score : {score}";

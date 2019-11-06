@@ -62,18 +62,22 @@ public class GameManager : MonoBehaviour
             score.SetText();
             SoundManager.instance.PlaySound(boxSound[Random.Range(0, boxSound.Count)]);
             mainCamera.StartCoroutine(mainCamera.Shake());
-
-            lastParcel = parcelQueue.Peek();
-            parcelQueue.Dequeue();
-            parcelQueue.Peek().moveAnimation = belt.SetAnimationSpeed;
-            lastParcel.StartCoroutine("Sort");
-            foreach (var item in parcelQueue)
-                item.StartCoroutine("Move");
-            parcelQueue.Enqueue(lastParcel);
+            Sort();
         }
 
         else
             GameOver();
+    }
+
+    private void Sort()
+    {
+        lastParcel = parcelQueue.Peek();
+        parcelQueue.Dequeue();
+        parcelQueue.Peek().moveAnimation = belt.SetAnimationSpeed;
+        lastParcel.StartCoroutine("Sort");
+        foreach (var item in parcelQueue)
+            item.StartCoroutine("Move");
+        parcelQueue.Enqueue(lastParcel);
     }
 
     private void GameOver()
@@ -84,7 +88,7 @@ public class GameManager : MonoBehaviour
         timer.StopAllCoroutines();
     }
 
-    public void OpenPauseBoard()
+    private void OpenPauseBoard()
     {
         if (state == State.play)
         {

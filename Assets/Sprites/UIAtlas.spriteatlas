@@ -43,11 +43,11 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: db340f7f3eaffae4a941abbfc5e7e1ca, type: 3}
-    totalSpriteSurfaceArea: 8192
+    totalSpriteSurfaceArea: 9216
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: 69c386669bc82c491599d12d7d7d73ff
+      Hash: ab5cc008ecacee64e71bc3f42e31a276
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: a69c1fd35cd788043923451b29993e09, type: 3}
@@ -55,6 +55,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 47d5f2b42a92be349b33a528cedd54d9, type: 3}
   - {fileID: 21300000, guid: 1d92bce48c576694b8ad983d946153b4, type: 3}
   - {fileID: 21300000, guid: 7dc56d66d44ab254694071a779634962, type: 3}
+  - {fileID: 21300000, guid: 6c02330b78b78454cada6b9cd9a96e40, type: 3}
   - {fileID: 21300000, guid: 3429e87d06f0ad74b885cbf732afed25, type: 3}
   - {fileID: 21300000, guid: dad7e5ae4a41f7c41b81575de4424725, type: 3}
   - {fileID: 21300000, guid: 29b0ee2f26856894f9ebcbf6a5a5c277, type: 3}
@@ -64,6 +65,7 @@ SpriteAtlas:
   - Main
   - Mute
   - PlayButton
+  - RankingButton
   - ArrowButton
   - UnMute
   - ReplayButton
