@@ -5,19 +5,14 @@ using GooglePlayGames.BasicApi;
 
 public class GooglePlayGameService : MonoBehaviour
 {
-    private static bool isCreated = false;
+    [SerializeField]
+    private BestScoreText bestScoreText;
+
+    private AndroidToast androidToast;
 
     private void Awake()
     {
-        if (isCreated)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        isCreated = true;
-        DontDestroyOnLoad(gameObject);
-
+        androidToast = gameObject.AddComponent<AndroidToast>();
         PlayGamesPlatform.InitializeInstance(new PlayGamesClientConfiguration.Builder().Build());
         PlayGamesPlatform.DebugLogEnabled = true;
         PlayGamesPlatform.Activate();
@@ -32,11 +27,12 @@ public class GooglePlayGameService : MonoBehaviour
             StartCoroutine(fail());
     }
 
-    private IEnumerator fail(){
-        AndroidToast.instance.ShowToast("로그인 실패");
+    private IEnumerator fail()
+    {
+        androidToast.ShowToast("로그인 실패");
         yield return new WaitForSeconds(2f);
-        AndroidToast.instance.CancelToast();
-        yield break;  
+        androidToast.CancelToast();
+        yield break;
     }
 
     private void LoadScore()
@@ -46,17 +42,17 @@ public class GooglePlayGameService : MonoBehaviour
             (data) =>
             {
                 if (data.PlayerScore.value > PlayerPrefs.GetInt("BestScore"))
+                {
                     PlayerPrefs.SetInt("BestScore", (int)data.PlayerScore.value);
+                    bestScoreText.UpdateBestScore();
+                }
                 else if (data.PlayerScore.value < PlayerPrefs.GetInt("BestScore"))
                     UpdateScore(PlayerPrefs.GetInt("BestScore"));
             }
         );
     }
 
-    public static void UpdateScore(int score)
-    {
-        Social.ReportScore(score, GPGSIds.leaderboard_ranking, (b) => { });
-    }
+    public static void UpdateScore(int score) => Social.ReportScore(score, GPGSIds.leaderboard_ranking, (b) => { });
 
     public static void OpenLeaderBoard() => Social.Active.ShowLeaderboardUI();
 }
