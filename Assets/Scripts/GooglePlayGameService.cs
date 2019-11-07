@@ -9,14 +9,19 @@ public class GooglePlayGameService : MonoBehaviour
     private BestScoreText bestScoreText;
 
     private AndroidToast androidToast;
+    private static bool isTriedLogin = false;
 
     private void Awake()
     {
-        androidToast = gameObject.AddComponent<AndroidToast>();
-        PlayGamesPlatform.InitializeInstance(new PlayGamesClientConfiguration.Builder().Build());
-        PlayGamesPlatform.DebugLogEnabled = true;
-        PlayGamesPlatform.Activate();
-        Social.localUser.Authenticate(AuthenticateCallback);
+        if (!isTriedLogin)
+        {
+            isTriedLogin = true;
+            androidToast = gameObject.AddComponent<AndroidToast>();
+            PlayGamesPlatform.InitializeInstance(new PlayGamesClientConfiguration.Builder().Build());
+            PlayGamesPlatform.DebugLogEnabled = true;
+            PlayGamesPlatform.Activate();
+            Social.localUser.Authenticate(AuthenticateCallback);
+        }
     }
 
     private void AuthenticateCallback(bool success)
